@@ -162,7 +162,7 @@ func (t *Computer) CheckPortfolio(REQUEST2 *int, RESPONSE2 *StockPortfolioDetail
 							} else {
 								buffer.WriteString("$")
 							}
-			currentPrice = currentPrice + (currentStocksPrice[i] * noOfStocks[i])
+			currentPrice = currentPrice + (currentStocksPrice[i] * float64(noOfStocks[i]))
 			fmt.Println(currentPrice)
 			b2 = float64(currentStocksPrice[i])
 			buffer.WriteString(strconv.FormatFloat(b2, 'f', 2, 64))
